@@ -12,10 +12,7 @@ You can run it using embeddd tomcat.If you want to deploy it on OpenLiberty serv
           <feature>springBoot-2.0</feature>
           <feature>servlet-3.1</feature>
       </featureManager>
-  6. You also need to add default httpPort: httpEndpoint httpsPort="9443" httpPort="9090" id="defaultHttpEndpoint"
-  
-      <httpEndpoint httpsPort="9443" httpPort="9090" id="defaultHttpEndpoint"/>
-      
+  6. You also need to change default httpPort to 9090: httpPort="9090"
   7. Open cmd and go to project directory and make a jar file: mvn package.
   8. Copy project jar file located in target directory into server_name/apps directory.
   9. Run created server: server.bat run server_name [Windows] / server run server_name[Linux].
