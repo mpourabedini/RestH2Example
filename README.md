@@ -1,7 +1,7 @@
 # RestH2Example
 
 This is a simple rest spring boot project using h2 in-memory database.
-You can run it using embeddd tomcat.If you want to deploy it on OpenLiberty server, you should do:
+If you want to deploy it on OpenLiberty server, you should do:
 
   1. Download OpenLiberty.
   2. Extract it into a directory.
