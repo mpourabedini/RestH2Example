@@ -6,11 +6,19 @@ You can run it using embeddd tomcat.If you want to deploy it on OpenLiberty serv
   1. Download OpenLiberty.
   2. Extract it into a directory.
   3. Open cmd and go to bin directory of OpenLiberty.
-  3. Create new server in OpenLibery: server create server_name.
-  2. Open cmd and go to project directory and make a jar file: mvn package.
-  4. Copy project jar file located in target directory into server_name/apps directory.
-  5. Run created server: server.bat run server_name [Windows] / server run server_name[Linux].
-  6. Test app in your browser: http://localhost:9090/users.
+  4. Create new server in OpenLibery: server create server_name.
+  5. Open server.xml and add two feature : 
+      <featureManager>
+          <feature>springBoot-2.0</feature>
+          <feature>servlet-3.1</feature>
+      </featureManager>
+  6. You also need to add default httpPort:
+      <httpEndpoint httpsPort="9443" httpPort="9090" id="defaultHttpEndpoint"/>
+      
+  7. Open cmd and go to project directory and make a jar file: mvn package.
+  8. Copy project jar file located in target directory into server_name/apps directory.
+  9. Run created server: server.bat run server_name [Windows] / server run server_name[Linux].
+  10. Test app in your browser: http://localhost:9090/users.
   
 You can also add New User using a Post request: http://localhost:9090/add_user.
 
