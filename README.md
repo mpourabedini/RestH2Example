@@ -6,8 +6,8 @@ You can run it using embeddd tomcat.If you want to deploy it on OpenLiberty serv
   1. Download OpenLiberty.
   2. Extract it into a directory.
   3. Open cmd and go to bin directory of OpenLiberty.
-  4. Create new server in OpenLibery: server create server_name.
-  5. Open server.xml and add two feature : 
+  4. Create a new server in OpenLibery: server create server_name.
+  5. Open server.xml and add two features : 
       <featureManager>
           <feature>springBoot-2.0</feature>
           <feature>servlet-3.1</feature>
